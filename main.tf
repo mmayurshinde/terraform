@@ -1,10 +1,9 @@
-provider "aws" {
-  region = "ap-southeast-2"
-(*   access_key = "AKIA5FTZA73XHLM5Y3KG"
-  secret_key = "WHAkR9U+V5uUvU87mLc9mZvyW31AGFA5T9ztvp/Skey" *)
-}
+resource "aws_instance" "example" {
+  ami           = "ami-04f5097681773b989"
+  instance_type = "t2.micro"                
+  key_name      = "key-value-terra"
 
-module "launch_ec2" {
-  source = "./launch_ec2"
-
+  tags = {
+    Name = "LaunchEC2"  
+  }
 }
