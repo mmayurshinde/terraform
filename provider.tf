@@ -1,5 +1,14 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
 provider "aws" {
   region     = "ap-southeast-2"
-// accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-// secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+  access_key = ""
+  secret_key = ""
 }
